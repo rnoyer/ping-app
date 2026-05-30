@@ -11,6 +11,10 @@ app.get("/ping", (req, res) => {
   res.send("pong");
 });
 
+app.get("/secret", (req, res) => {
+  res.send(process.env.NOT_SO_SECRET);
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
